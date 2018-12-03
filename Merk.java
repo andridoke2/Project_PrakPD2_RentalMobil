@@ -11,10 +11,6 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author doke
- */
 public class Merk {
     
     static Scanner in = new Scanner(System.in);
@@ -59,7 +55,7 @@ public class Merk {
             }
         } while(true);
     }
-    
+//test    
     public static void tambahMerk(){
         System.out.print("ID Jenis         : ");
         int id = in.nextInt();

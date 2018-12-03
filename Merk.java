@@ -36,15 +36,18 @@ public class Merk {
             int x = in.nextInt();
             switch(x){
                 case 1:
+                    lihatMerk();
                     tambahMerk();
                     break;
                 case 2:
                     lihatMerk();
                     break;
                 case 3:
+                    lihatMerk();
                     editMerk();
                     break;
                 case 4:
+                    lihatMerk();
                     hapusMerk();
                     break;
                 case 0:

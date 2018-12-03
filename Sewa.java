@@ -55,22 +55,17 @@ public class Sewa {
         int id_uni;
         System.out.print("Nomor Sewa            : ");
         String no = in.next();
-        System.out.println("-----------------------");
         System.out.print("ID Customer           : ");
         String id_cus = in.next();
-        System.out.println("-----------------------");
         do {
             System.out.print("ID Unit               : ");
             id_uni = in.nextInt();
-            System.out.println("-----------------------");
         } while(q.cek(id_uni) !=false);
         System.out.print("Lama Sewa (Hari)      : ");
         int hari = in.nextInt();
         double total = hrg_sewa * hari;
-        System.out.println("-----------------------");
         System.out.print("Jaminan               : ");
         String jaminan = in.next();
-        System.out.println("-----------------------");
         
         String sql = "INSERT INTO penyewaan (NO_SEWA,ID_CUSTOMER,JML_HARI,JAMINAN) "
                 + "VALUES ('" + no + "', '" + id_cus + "', '" + hari + "', '"+ jaminan +"')";
@@ -140,7 +135,7 @@ public class Sewa {
     }
     
     public static void praSewa() {
-        System.out.println("ID Unit     :");
+        System.out.print("ID Unit     : ");
         int id = in.nextInt();
         q.pop(id);
     }

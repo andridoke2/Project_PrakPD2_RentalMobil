@@ -15,9 +15,10 @@ public class Main {
             System.out.println("|============================|");
             System.out.println("|    APLIKASI SEWA MOBIL     |");
             System.out.println("|----------------------------|");
-            System.out.println("|   1. Unit                  |");
-            System.out.println("|   2. Customer              |");
-            System.out.println("|   3. Sewa                  |");
+            System.out.println("|   1. Merk                  |");
+            System.out.println("|   2. Unit                  |");
+            System.out.println("|   3. Customer              |");
+            System.out.println("|   4. Sewa                  |");
             System.out.println("|   0. Keluar                |");
             System.out.println("|============================|");
             System.out.print("=> ");
@@ -25,12 +26,14 @@ public class Main {
             System.out.println();
             switch(x) {
                 case 1:
-                    Unit.mainUnit();
+                    Merk.mainMerk();
                     break;
                 case 2:
-                    Customer.mainCustomer();
+                    Unit.mainUnit();
                     break;
                 case 3:
+                    Customer.mainCustomer();
+                case 4:
                     Sewa.mainSewa();
                     break;
                 case 0:

@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Dec 03, 2018 at 02:47 AM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 7.2.10
+-- Host: 127.0.0.1
+-- Generation Time: Dec 10, 2018 at 07:43 AM
+-- Server version: 10.1.21-MariaDB
+-- PHP Version: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -42,7 +40,10 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`ID_CUSTOMER`, `NAMA_DPN`, `NAMA_BLKG`, `JK`, `ALAMAT`, `TELP_CUSTOMER`) VALUES
-('1', 'Andri', 'Doke', 'L', 'Malang', '082152085281');
+('1', 'Andri', 'Doke', 'L', 'Malang', '082152085281'),
+('2', 'Dimas', 'Mahar', 'L', 'Malang', '0812391195123'),
+('3', 'Joni', 'Iskandar', 'L', 'Bekasi', '08132114424'),
+('4', 'Susi', 'Lestari', 'P', 'Jember', '083224412412');
 
 -- --------------------------------------------------------
 
@@ -73,7 +74,10 @@ CREATE TABLE `merk_unit` (
 --
 
 INSERT INTO `merk_unit` (`ID_JENIS`, `NAMA_JENIS`, `KET_JENIS`) VALUES
-('1', 'Lamboerghini', 'Black');
+('1', 'Lamboerghini', 'Black'),
+('2', 'Audi', 'AudiTT'),
+('3', 'Toyota', 'Alphard'),
+('4', 'Bugatti', 'Bugatti Veyron');
 
 -- --------------------------------------------------------
 
@@ -106,7 +110,10 @@ CREATE TABLE `unit` (
 --
 
 INSERT INTO `unit` (`ID_UNIT`, `ID_JENIS`, `NAMA_UNIT`, `TAHUN`) VALUES
-(1, '1', 'Galardo', '2019');
+(1, '1', 'Galardo', '2019'),
+(2, '2', 'Audi', '2011'),
+(3, '3', 'Toyota', '2014'),
+(4, '4', 'Bugatti', '2005');
 
 --
 -- Indexes for dumped tables
@@ -166,7 +173,6 @@ ALTER TABLE `penyewaan`
 --
 ALTER TABLE `unit`
   ADD CONSTRAINT `unit_ibfk_1` FOREIGN KEY (`ID_JENIS`) REFERENCES `merk_unit` (`ID_JENIS`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
